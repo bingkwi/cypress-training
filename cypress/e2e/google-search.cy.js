@@ -1,8 +1,18 @@
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://www.google.com/')
-    cy.get('div.a4bIc > input').type("hai ba con mực, anh yêu em cực")
-    cy.get("body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf.emcav > div.UUbT9 > div.aajZCb > div.lJ9FBc > center > input.gNO89b").click()
-    cy.get('#rcnt > div.XqFnDf > div > div > div.HdbW6.MjUjnf.VM6qJ > div.hHq9Z > div > div > div > div > div > div.PyJv1b.gsmt.PZPZlf > span').should('have.text', "Minh")
+describe('Test case search keyword in Google and verify result', () => {
+  beforeEach (() => {
+      cy.visit('https://www.google.com')
+  })
+
+  it('Search an random keyword (Google)', () => {
+      
+      //enter google on search
+      cy.get('input[name="q"]').should('be.empty').type('google{enter}');
+      //verify result
+
+      //have keyword Google
+      cy.get('h3').should('include.text',"Google");
+      // link www.google.com appear
+      cy.get('cite').should('include.text',"www.google.com.vn");
+      
   })
 })
