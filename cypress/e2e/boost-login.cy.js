@@ -1,14 +1,14 @@
-import LoginBoostPageObject from "../support/pageObject/LoginBoostPageObject"
+import LoginPageObject from "../support/pageObject/LoginPageObject"
 
 describe("Test login from boost app", () => {
-    const loginBoostPageObject = new LoginBoostPageObject()
+    const loginPageObject = new LoginPageObject()
 
     it('test login screen', function () {
-    //    cy.login('cmctest@qa.team','Linh1993@')
-    
-    loginBoostPageObject.inputEmail("cmctest@qa.team")
-    loginBoostPageObject.inputPassword("Linh1993@")
-    loginBoostPageObject.clickLoginButton()
+        //cy.login('bingkwi','matkhaugit01')
+        cy.visit('https://github.com/login')
+        loginPageObject.inputEmail("bingkwi")
+        loginPageObject.inputPassword("matkhaugit01")
+        loginPageObject.clickLoginButton()
     })
 
 })

@@ -25,9 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password) => { 
-    cy.visit('https://sb-merchant.boostbusiness.my/auth/login')
-    cy.xpath("//input[@autocomplete='email']").type(email)
-    cy.xpath("//input[@autocomplete='current-password']").type(password)
-    cy.xpath("//button[text()= 'Login']").click()
- })
+// Cypress.Commands.add('login', (email, password) => { 
+//     cy.visit('https://github.com/login')
+    // cy.xpath("//input[@autocomplete='email']").type(email)
+    // cy.xpath("//input[@autocomplete='current-password']").type(password)
+    // cy.xpath("//button[text()= 'Login']").click()
+//  })
