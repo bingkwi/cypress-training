@@ -6,5 +6,5 @@ Cypress.Commands.add("testLogin", (email, password) => {
     loginPageObject.getEmailTextbox().type(email)
     loginPageObject.getPasswordTextbox().type(password)
     loginPageObject.clickLoginButton().click()
-    loginPageObject.clickLogout().click()
+    //loginPageObject.clickLogout().click()
 })

@@ -1,8 +1,4 @@
-import LoginPageObject from "../support/pageObject/LoginPageObject"
-
 describe("Test login from boost app", () => {
-    const loginPageObject = new LoginPageObject()
-
     beforeEach(()=> {
         cy.visit('https://sb-merchant.boostbusiness.my/auth/login')
     })

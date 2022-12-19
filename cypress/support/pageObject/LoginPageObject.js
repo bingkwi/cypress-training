@@ -20,9 +20,9 @@ class LoginPageObject {
         return cy.xpath("//*[text()='Login']")
     }
 
-    clickLogout() {
-        return cy.xpath("//*[text()='Logout']")
-    }
+    // clickLogout() {
+    //     return cy.xpath("//*[text()='Logout']")
+    // }
 }
 
 export default LoginPageObject
