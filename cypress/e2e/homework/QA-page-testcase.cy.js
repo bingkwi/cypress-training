@@ -34,20 +34,22 @@ describe("Practice get element selector", () => {
             .should("be.empty")
             .type("0914445212")
 
-        // cy.xpath("//input[@id='dateOfBirthInput']")
-        //     .clear()
-        //     .
-        
-        //cy.xpath("")
+        cy.xpath("//input[@id='dateOfBirthInput']")
+            .click()
+
+       
+        cy.xpath("//select[@class='react-datepicker__month-select']").select("June")    
+        cy.xpath("//select[@class='react-datepicker__year-select']").select("1999")
+        cy.xpath("//div[text()=17]").click()  
 
         cy.xpath("//label[@for='hobbies-checkbox-1']")
             .click()
         
         cy.xpath("//div[@class=' css-yk16xz-control']")
-            .type("NCR{enter}")
+            .type("Haryana{enter}")
 
         cy.xpath("(//div[@class=' css-1hwfws3'])[2]")
-            .type("Delhi{enter}")
+            .type("Karnal{enter}")
 
         cy.xpath("//button[@id='submit']")
             .click()
