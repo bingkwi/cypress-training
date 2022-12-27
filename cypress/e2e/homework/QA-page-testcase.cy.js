@@ -1,3 +1,6 @@
+import TotalsQAPage from "../../support/pageObject/ToolsQAPage";
+
+const practiceForm = new TotalsQAPage()
 describe("Practice get element selector", () => {
 
     beforeEach(() => {
@@ -13,45 +16,38 @@ describe("Practice get element selector", () => {
         cy.xpath("//div[@class='element-list collapse show']")
             .click()
 
-        cy.xpath("//input[@id='firstName']")
-            .clear()
-            .should("be.empty")
+        practiceForm.getFirstNameInput()
             .type("pinky")
 
-        cy.xpath("//input[@id='lastName']")
-            .clear()
-            .should("be.empty")
+        practiceForm.getLastNameInput()
             .type("truan")
 
-        cy.xpath("//input[@id='userEmail']")
+        practiceForm.getEmailInput()
             .type("pinky@go.vn")
 
-        cy.xpath("//label[@for='gender-radio-2']")
+        practiceForm.getGenderRadioButton()
             .click()
 
-        cy.xpath("//input[@id='userNumber']")
+        practiceForm.getUserNumberInput()
             .clear()
             .should("be.empty")
             .type("0914445212")
-
-        cy.xpath("//input[@id='dateOfBirthInput']")
-            .click()
-
-       
-        cy.xpath("//select[@class='react-datepicker__month-select']").select("June")    
-        cy.xpath("//select[@class='react-datepicker__year-select']").select("1999")
-        cy.xpath("//div[text()=17]").click()  
-
-        cy.xpath("//label[@for='hobbies-checkbox-1']")
-            .click()
         
-        cy.xpath("//div[@class=' css-yk16xz-control']")
-            .type("Haryana{enter}")
+        practiceForm.getDobInput()
+            .click()
 
-        cy.xpath("(//div[@class=' css-1hwfws3'])[2]")
-            .type("Karnal{enter}")
+        practiceForm.getMonthDropDown().select("June")    
+        practiceForm.getYearDropDown().select("1999")
+        practiceForm.getDayDropDown().click()  
+        
+        practiceForm.getHobbiesCheckbox().click()
+               
+        practiceForm.getStateDropDown().type("Haryana{enter}")
 
-        cy.xpath("//button[@id='submit']")
+        
+        practiceForm.getCityDropDown().type("Karnal{enter}")
+
+        practiceForm.getSubmitButton()
             .click()
     })
 

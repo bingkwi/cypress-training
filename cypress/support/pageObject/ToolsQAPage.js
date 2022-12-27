@@ -1,35 +1,56 @@
 class TotalsQAPage {
-    elements = {
-     
+    getFirstNameInput() {
+        return cy.xpath("//input[@id='firstName']")
     }
 
-    typeFirstName(firstName) {
-        this.elements.firstNameInput().type(firstName)
+    getLastNameInput() {
+        return cy.xpath("//input[@id='lastName']")
     }
 
-    typeLastName(lastName) {
-        this.elements.lastNameInput().type(lastName)
+    getEmailInput() {
+        return cy.xpath("//input[@id='userEmail']")
     }
 
-    typeEmail(email) {
-        this.elements.emailInput().type(email)
+    getGenderRadioButton() {
+        return cy.xpath("//label[@for='gender-radio-2']")
     }
 
-    clickGender() {
-        this.elements.genderBtn().click();
+    getUserNumberInput() {
+        return cy.xpath("//input[@id='userNumber']")
     }
 
-    typePhoneNumber(phoneNumber) {
-        this.elements.phoneInput().type(phoneNumber)
+    getDobInput() {
+        return cy.xpath("//input[@id='dateOfBirthInput']")
     }
 
-    typeDob(dob) {
-        this.elements.dobInput().type(dob)
+    getMonthDropDown() {
+        return cy.xpath("//select[@class='react-datepicker__month-select']")
     }
 
-    clickSubmit() {
-        this.elements.submitBtn().click();
+    getYearDropDown() {
+        return cy.xpath("//select[@class='react-datepicker__year-select']")
     }
+
+    getDayDropDown() {
+        return cy.xpath("//div[text()=17]")
+    }
+    
+    getHobbiesCheckbox() {
+        return cy.xpath("//label[@for='hobbies-checkbox-1']")
+    }
+
+    getStateDropDown() {
+        return cy.xpath("//div[@class=' css-yk16xz-control']")
+    }
+
+    getCityDropDown() {
+        return cy.xpath("(//div[@class=' css-1hwfws3'])[2]")
+    }
+
+    getSubmitButton() {
+        return cy.xpath("//button[@id='submit']")
+    }
+
 }
 
 export default TotalsQAPage
