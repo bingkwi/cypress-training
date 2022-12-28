@@ -1,4 +1,4 @@
-import TotalsQAPage from "../../support/pageObject/ToolsQAPage";
+import TotalsQAPage from "../../../support/pageObject/ToolsQAPage";
 
 const practiceForm = new TotalsQAPage()
 describe("Practice get element selector", () => {
