@@ -6,16 +6,18 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 describe("datepicker demo", () => {
     const datepickerPO = new DatePickerPO()
-    const currentYear = 2022
-    const year = 2018
+    const currentYear = new Date().getFullYear()
+    const year = 2021
     const month = 12
+    const day = 25
+    //const nextYear = 2024
 
     beforeEach(() => {
         cy.viewport(1920,1080)
         cy.visit("https://demo.automationtesting.in/Datepicker.html")
     })
 
-    it("choose date of birth", () => {
+    it.only("choose the previous year", () => {
         datepickerPO.getDatePicker().click()
 
         for (let index = 0; index < 12 * (currentYear - year) + (12 - month); index++) {
@@ -23,9 +25,10 @@ describe("datepicker demo", () => {
 
         }
 
-        datepickerPO.getDay().click()
+        datepickerPO.getDay(day).click()
     })
 
+    
 
 
 })

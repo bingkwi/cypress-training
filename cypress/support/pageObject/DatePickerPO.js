@@ -15,16 +15,12 @@ class DatePickerPO {
         return cy.xpath("//span[text()='Next']")
     }
 
-    getMonthName() {
-        return cy.xpath("//span[@class='ui-datepicker-month']")
-    }
-
-    getYearName() {
+    getCurrentYear() {
         return cy.xpath("//span[@class='ui-datepicker-year']")
     }
 
-    getDay() {
-        return cy.xpath("//a[text()='12']")
+    getDay(day) {
+        return cy.xpath("//a[text()=" + day +"]")
     }
 }
 
