@@ -51,6 +51,10 @@ class RegisterUI {
     getLoginButton() {
         return cy.xpath("//a[text()='Log in']")
     }
+
+    getResultSuccessfully(){
+        return cy.xpath("//div[@class='result']")
+    }
 }
 
 export default RegisterUI

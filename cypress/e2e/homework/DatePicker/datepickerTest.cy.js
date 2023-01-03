@@ -7,9 +7,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe("datepicker demo", () => {
     const datepickerPO = new DatePickerPO()
     const currentYear = new Date().getFullYear()
-    const year = 2021
+    const year = 2012
     const month = 12
-    const day = 25
+    const day = 12
     //const nextYear = 2024
 
     beforeEach(() => {
